@@ -14,7 +14,7 @@ public class Application {
 
 		var service = context.getBean(CartService.class);
 
-		service.addItemToCart(1,4);
+/*		service.addItemToCart(1,4);
 		printCartData(service);
 		service.displayRecentActivity();
 		service.addItemToCart(0,3);
@@ -35,7 +35,6 @@ public class Application {
 		service.removeItemFromCart(0);
 		printCartData(service);
 		service.displayRecentActivity();
-
 		var session = context.getBean(ShoppingSession.class);
 		session.displayStartDateTime();
 
@@ -45,6 +44,8 @@ public class Application {
 
 		var resource = context.getBean(Resources.class);
 		System.out.println(resource);
+
+ */
 	}
 
 
