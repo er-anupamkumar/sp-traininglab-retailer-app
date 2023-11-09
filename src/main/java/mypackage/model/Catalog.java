@@ -1,4 +1,4 @@
-package mypackage;
+package mypackage.model;
 
 import org.springframework.stereotype.Component;
 import java.util.HashMap;

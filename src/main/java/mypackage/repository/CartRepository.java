@@ -1,4 +1,4 @@
-package mypackage;
+package mypackage.repository;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package mypackage;
+package mypackage.model;
 
 import java.time.LocalDateTime;
 import java.util.LinkedList;

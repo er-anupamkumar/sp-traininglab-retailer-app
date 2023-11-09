@@ -1,5 +1,8 @@
-package mypackage;
+package mypackage.service;
 
+import mypackage.model.Catalog;
+import mypackage.model.Transcript;
+import mypackage.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 

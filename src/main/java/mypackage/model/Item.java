@@ -1,4 +1,4 @@
-package mypackage;
+package mypackage.model;
 
 public class Item {
 

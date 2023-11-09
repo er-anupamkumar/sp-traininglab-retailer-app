@@ -1,5 +1,6 @@
-package mypackage;
+package mypackage.config;
 
+import mypackage.model.Transcript;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

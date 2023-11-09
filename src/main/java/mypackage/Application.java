@@ -1,5 +1,7 @@
 package mypackage;
 
+import mypackage.components.ShoppingSession;
+import mypackage.service.CartService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
