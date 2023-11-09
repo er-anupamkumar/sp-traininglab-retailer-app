@@ -1,0 +1,4 @@
+resources:
+  db: Oracle
+  logs: //PROD_SERVER\logs\
+  secure: true

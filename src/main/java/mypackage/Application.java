@@ -1,5 +1,6 @@
 package mypackage;
 
+import mypackage.components.Resources;
 import mypackage.components.ShoppingSession;
 import mypackage.service.CartService;
 import org.springframework.boot.SpringApplication;
@@ -41,6 +42,9 @@ public class Application {
 		service.displayEmailAddress();
 		service.displayApplicableSalesTax();
 		service.displayDeliveryCharges();
+
+		var resource = context.getBean(Resources.class);
+		System.out.println(resource);
 	}
 
 
