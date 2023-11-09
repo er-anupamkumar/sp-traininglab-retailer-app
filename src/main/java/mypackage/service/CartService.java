@@ -8,4 +8,7 @@ public interface CartService {
     Map<Integer, Integer> getAllItemsInCart();
     double calculateCartCost();
     void displayRecentActivity();
+    void displayEmailAddress();
+    void displayApplicableSalesTax();
+    void displayDeliveryCharges();
 }

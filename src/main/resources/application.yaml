@@ -1,0 +1,6 @@
+contactEmail: "test@cgi.com"
+tax:
+  salesTaxRate: 0.20
+delivery:
+    normal: 2.50
+    threshold: 3000

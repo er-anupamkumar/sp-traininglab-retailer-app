@@ -37,7 +37,13 @@ public class Application {
 
 		var session = context.getBean(ShoppingSession.class);
 		session.displayStartDateTime();
+
+		service.displayEmailAddress();
+		service.displayApplicableSalesTax();
+		service.displayDeliveryCharges();
 	}
+
+
 
 	private static void printCartData(CartService service) {
 		System.out.println("cart items:"+ service.getAllItemsInCart());

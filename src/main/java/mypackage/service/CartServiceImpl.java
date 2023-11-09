@@ -1,9 +1,12 @@
 package mypackage.service;
 
+import mypackage.components.DeliveryRates;
+import mypackage.components.TaxRates;
 import mypackage.model.Catalog;
 import mypackage.model.Transcript;
 import mypackage.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -12,14 +15,21 @@ import java.util.concurrent.atomic.AtomicReference;
 @Service
 public class CartServiceImpl implements CartService{
 
+    @Value("${contactEmail}")
+    String email;
+
     private Catalog catalog;
     private CartRepository cartRepository;
     private Transcript transcript;
+    private DeliveryRates deliveryRates;
+    private TaxRates taxRates;
 
-    public CartServiceImpl(Catalog catalog, CartRepository repository, @Qualifier("brief") Transcript transcript) {
+    public CartServiceImpl(Catalog catalog, CartRepository cartRepository, Transcript transcript, DeliveryRates deliveryRates, TaxRates taxRates) {
         this.catalog = catalog;
-        this.cartRepository = repository;
+        this.cartRepository = cartRepository;
         this.transcript = transcript;
+        this.deliveryRates = deliveryRates;
+        this.taxRates = taxRates;
     }
 
     @Override
@@ -61,5 +71,19 @@ public class CartServiceImpl implements CartService{
     @Override
     public void displayRecentActivity (){
         transcript.display();
+    }
+
+    public void displayEmailAddress() {
+        System.out.printf("email: %s",email);
+    }
+
+    public void displayApplicableSalesTax(){
+        var cartCost = calculateCartCost();
+        System.out.printf("Sales Tax on cart: %s",cartCost* taxRates.getSalesTaxRate()/100);
+    }
+
+    public void displayDeliveryCharges(){
+        System.out.printf("Delivery Rates: %s",deliveryRates.getNormal());
+        System.out.printf("Minimum Amount : %s",deliveryRates.getThreshold());
     }
 }
