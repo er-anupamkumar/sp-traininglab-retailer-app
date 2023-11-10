@@ -20,5 +20,5 @@ public class ProductSuggestion {
 
     private Double recommendedPrice;
 
-    private Double estimatedAnnualSales;
+    private Long estimatedAnnualSales;
 }
